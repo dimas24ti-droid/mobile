@@ -6,6 +6,7 @@ import android.util.Log
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import com.example.saturnus_dimasbudi.pert4.FourthActivity
+import com.example.saturnus_dimasbudi.pert5.FifthActivity
 
 class MainActivity : AppCompatActivity() {
 
@@ -22,6 +23,12 @@ class MainActivity : AppCompatActivity() {
                 putExtra("from", "Rumbai")
                 putExtra("age", 25)
             }
+            startActivity(intent)
+        }
+
+        val btnToFifth = findViewById<Button>(R.id.btnToFifth)
+        btnToFifth.setOnClickListener {
+            val intent = Intent(this, FifthActivity::class.java)
             startActivity(intent)
         }
     }
