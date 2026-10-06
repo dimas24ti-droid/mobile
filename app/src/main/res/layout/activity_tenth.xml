@@ -1,0 +1,349 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0D2B45"
+    tools:context=".pert10.TenthActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="24dp">
+
+        <!-- Wave Header Background -->
+        <View
+            android:id="@+id/background_header"
+            android:layout_width="0dp"
+            android:layout_height="120dp"
+            android:background="@drawable/bg_header_wave"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Toolbar -->
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@android:color/transparent"
+            app:title="Pertemuan 10 - Material UI"
+            app:titleTextColor="#FFFFFF"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Card Section 1: TextInputLayout & Material Button -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="16dp"
+            app:cardBackgroundColor="#163A5F"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="6dp"
+            app:strokeColor="#244E7A"
+            app:strokeWidth="1dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Form Inisialisasi Email"
+                    android:textColor="#FFFFFF"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="12dp" />
+
+                <!-- TextInputLayout -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textInputLayout"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Email Address"
+                    app:boxStrokeColor="#8AB4F8"
+                    app:endIconMode="clear_text"
+                    app:endIconTint="#8AB4F8"
+                    app:helperText="Petunjuk: Masukkan email aktif Anda"
+                    app:helperTextTextColor="#8AB4F8"
+                    app:hintTextColor="#8AB4F8"
+                    app:startIconDrawable="@drawable/ic_edit"
+                    app:startIconTint="#8AB4F8">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etEmail"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textEmailAddress"
+                        android:textColor="#FFFFFF" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- MaterialButton Login -->
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnLogin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:backgroundTint="#BD3039"
+                    android:paddingVertical="12dp"
+                    android:text="Login Akun"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:cornerRadius="10dp"
+                    app:icon="@drawable/ic_login"
+                    app:iconGravity="textStart"
+                    app:iconPadding="8dp"
+                    app:iconTint="#FFFFFF" />
+
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Card Section 2: ChipGroup Filter -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardChip"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="16dp"
+            app:cardBackgroundColor="#163A5F"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="6dp"
+            app:strokeColor="#244E7A"
+            app:strokeWidth="1dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cardInput">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Filter Kategori (ChipGroup)"
+                    android:textColor="#FFFFFF"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="12dp" />
+
+                <com.google.android.material.chip.ChipGroup
+                    android:id="@+id/chipGroupFilter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:singleSelection="true">
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/chipTerbaru"
+                        style="@style/Widget.MaterialComponents.Chip.Filter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="true"
+                        android:text="Terbaru"
+                        android:textColor="#FFFFFF"
+                        app:chipBackgroundColor="#0D2B45" />
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/chipPenting"
+                        style="@style/Widget.MaterialComponents.Chip.Filter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Penting"
+                        android:textColor="#FFFFFF"
+                        app:chipBackgroundColor="#0D2B45" />
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/chipBelumDibaca"
+                        style="@style/Widget.MaterialComponents.Chip.Filter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Belum Dibaca"
+                        android:textColor="#FFFFFF"
+                        app:chipBackgroundColor="#0D2B45" />
+
+                </com.google.android.material.chip.ChipGroup>
+
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Card Section 3: Custom Rounded Background EditText -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardCustomBorder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="16dp"
+            app:cardBackgroundColor="#163A5F"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="6dp"
+            app:strokeColor="#244E7A"
+            app:strokeWidth="1dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cardChip">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Custom Background Rounded EditText"
+                    android:textColor="#FFFFFF"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="12dp" />
+
+                <EditText
+                    android:id="@+id/etCustomBorder"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:autofillHints="notes"
+                    android:background="@drawable/edit_text_background"
+                    android:hint="Ketik teks dengan custom rounded border..."
+                    android:inputType="text"
+                    android:textColor="#000000"
+                    android:textColorHint="#757575" />
+
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Card Section 4: GridLayout 6 Icon Buttons -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardGrid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="16dp"
+            app:cardBackgroundColor="#163A5F"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="6dp"
+            app:strokeColor="#244E7A"
+            app:strokeWidth="1dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cardCustomBorder">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="GridLayout Material Menu"
+                    android:textColor="#FFFFFF"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="12dp" />
+
+                <androidx.gridlayout.widget.GridLayout
+                    android:id="@+id/gridLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:columnCount="3"
+                    app:useDefaultMargins="true">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnMenu1"
+                        android:text="Home"
+                        android:textColor="#FFFFFF"
+                        app:backgroundTint="#0D2B45"
+                        app:cornerRadius="12dp"
+                        app:icon="@drawable/ic_menu_home"
+                        app:iconGravity="top"
+                        app:iconPadding="4dp"
+                        app:iconTint="#FFFFFF"
+                        app:layout_columnWeight="1"
+                        app:layout_gravity="fill_horizontal" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnMenu2"
+                        android:text="Pesan"
+                        android:textColor="#FFFFFF"
+                        app:backgroundTint="#0D2B45"
+                        app:cornerRadius="12dp"
+                        app:icon="@drawable/ic_menu_message"
+                        app:iconGravity="top"
+                        app:iconPadding="4dp"
+                        app:iconTint="#FFFFFF"
+                        app:layout_columnWeight="1"
+                        app:layout_gravity="fill_horizontal" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnMenu3"
+                        android:text="Favorit"
+                        android:textColor="#FFFFFF"
+                        app:backgroundTint="#0D2B45"
+                        app:cornerRadius="12dp"
+                        app:icon="@drawable/ic_menu_star"
+                        app:iconGravity="top"
+                        app:iconPadding="4dp"
+                        app:iconTint="#FFD700"
+                        app:layout_columnWeight="1"
+                        app:layout_gravity="fill_horizontal" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnMenu4"
+                        android:text="Info"
+                        android:textColor="#FFFFFF"
+                        app:backgroundTint="#0D2B45"
+                        app:cornerRadius="12dp"
+                        app:icon="@drawable/ic_menu_info"
+                        app:iconGravity="top"
+                        app:iconPadding="4dp"
+                        app:iconTint="#FFFFFF"
+                        app:layout_columnWeight="1"
+                        app:layout_gravity="fill_horizontal" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnMenu5"
+                        android:text="Setelan"
+                        android:textColor="#FFFFFF"
+                        app:backgroundTint="#0D2B45"
+                        app:cornerRadius="12dp"
+                        app:icon="@drawable/ic_menu_settings"
+                        app:iconGravity="top"
+                        app:iconPadding="4dp"
+                        app:iconTint="#FFFFFF"
+                        app:layout_columnWeight="1"
+                        app:layout_gravity="fill_horizontal" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnMenu6"
+                        android:text="Notif"
+                        android:textColor="#FFFFFF"
+                        app:backgroundTint="#0D2B45"
+                        app:cornerRadius="12dp"
+                        app:icon="@drawable/ic_menu_bell"
+                        app:iconGravity="top"
+                        app:iconPadding="4dp"
+                        app:iconTint="#FFFFFF"
+                        app:layout_columnWeight="1"
+                        app:layout_gravity="fill_horizontal" />
+
+                </androidx.gridlayout.widget.GridLayout>
+
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
