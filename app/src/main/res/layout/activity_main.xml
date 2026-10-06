@@ -35,6 +35,16 @@
         android:textSize="16sp"
         android:backgroundTint="#163A5F"
         android:textColor="#FFFFFF"
+        android:layout_marginBottom="12dp" />
+
+    <Button
+        android:id="@+id/btnToSixth"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Ke Sixth Activity"
+        android:textSize="16sp"
+        android:backgroundTint="#163A5F"
+        android:textColor="#FFFFFF"
         android:layout_marginBottom="24dp" />
 
     <!-- Tombol Logout Berwarna Merah Red Sox -->

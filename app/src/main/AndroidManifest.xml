@@ -19,30 +19,35 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
+        <activity
+            android:name=".BaseActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
         <activity
             android:name=".AuthActivity"
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
-
         <activity
             android:name=".MainActivity"
             android:exported="false" />
-
+        <activity
+            android:name=".pert2.SecondActivity"
+            android:exported="false" />
         <activity
             android:name=".pert4.FourthActivity"
             android:exported="false" />
-
         <activity
             android:name=".pert5.FifthActivity"
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
-
         <activity
             android:name=".pert5.WebViewActivity"
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
-
+        <activity
+            android:name=".pert6.SixthActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
     </application>
 
 </manifest>

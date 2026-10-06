@@ -7,6 +7,7 @@ import androidx.core.content.edit
 import com.example.saturnus_dimasbudi.databinding.ActivityMainBinding
 import com.example.saturnus_dimasbudi.pert4.FourthActivity
 import com.example.saturnus_dimasbudi.pert5.FifthActivity
+import com.example.saturnus_dimasbudi.pert6.SixthActivity
 
 class MainActivity : AppCompatActivity() {
 
@@ -29,6 +30,12 @@ class MainActivity : AppCompatActivity() {
         // Tombol menuju FifthActivity
         binding.btnToFifth.setOnClickListener {
             val intent = Intent(this, FifthActivity::class.java)
+            startActivity(intent)
+        }
+
+        // Tombol menuju SixthActivity
+        binding.btnToSixth.setOnClickListener {
+            val intent = Intent(this, SixthActivity::class.java)
             startActivity(intent)
         }
 
