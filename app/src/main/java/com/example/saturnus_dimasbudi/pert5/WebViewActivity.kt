@@ -30,7 +30,7 @@ class WebViewActivity : AppCompatActivity() {
         // Mengaktifkan toolbar & tombol back
         setSupportActionBar(binding.toolbar)
         supportActionBar?.apply {
-            title = "Web Merdeka"
+            title = "MLB"
             setDisplayHomeAsUpEnabled(true)
             setDisplayShowHomeEnabled(true)
             setHomeAsUpIndicator(R.drawable.ic_arrow_back) // Menambahkan custom icon panah back
@@ -39,7 +39,7 @@ class WebViewActivity : AppCompatActivity() {
         // Konfigurasi WebView
         binding.webView.webViewClient = WebViewClient()
         binding.webView.settings.javaScriptEnabled = true
-        binding.webView.loadUrl("https://merdeka.com")
+        binding.webView.loadUrl("https://www.mlb.com/redsox")
 
         // Agar Toolbar hide/show saat scroll web
         binding.webView.setOnScrollChangeListener { _, _, scrollY, _, oldScrollY ->

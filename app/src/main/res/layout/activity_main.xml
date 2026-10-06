@@ -3,6 +3,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#0D2B45"
     android:orientation="vertical"
     android:gravity="center"
     android:padding="24dp">
@@ -13,21 +14,40 @@
         android:text="Main Activity"
         android:textSize="26sp"
         android:textStyle="bold"
+        android:textColor="#FFFFFF"
         android:layout_marginBottom="30dp" />
 
+    <!-- Tombol Ke Fourth Activity -->
     <Button
         android:id="@+id/btnToFourth"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Ke Fourth Activity"
         android:textSize="16sp"
+        android:backgroundTint="#163A5F"
+        android:textColor="#FFFFFF"
         android:layout_marginBottom="12dp" />
 
+    <!-- Tombol Ke Fifth Activity -->
     <Button
         android:id="@+id/btnToFifth"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Ke Fifth Activity"
-        android:textSize="16sp" />
+        android:textSize="16sp"
+        android:backgroundTint="#163A5F"
+        android:textColor="#FFFFFF"
+        android:layout_marginBottom="24dp" />
+
+    <!-- Tombol Logout Merah Red Sox -->
+    <Button
+        android:id="@+id/btnLogout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Logout"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:backgroundTint="#BD3039"
+        android:textColor="#FFFFFF" />
 
 </LinearLayout>
