@@ -9,6 +9,7 @@ import androidx.fragment.app.Fragment
 import com.example.saturnus_dimasbudi.pert6.home.HomeFragment
 import com.example.saturnus_dimasbudi.pert6.message.MessageFragment
 import com.example.saturnus_dimasbudi.pert6.more.MoreFragment
+import com.example.saturnus_dimasbudi.pert6.note.NoteFragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class BaseActivity : AppCompatActivity() {
@@ -40,6 +41,10 @@ class BaseActivity : AppCompatActivity() {
                 }
                 R.id.message -> {
                     replaceFragment(MessageFragment())
+                    true
+                }
+                R.id.note -> {
+                    replaceFragment(NoteFragment())
                     true
                 }
                 R.id.more -> {
